@@ -1,7 +1,7 @@
 import db from '../config/db.js';
 
 const selectAllPosts = async () => {
-    const [result] = await db.execute('SELECT * FROM posts');
+    const [result] = await db.execute('SELECT * FROM posts JOIN autores ON posts.autores_id = autores.id');
     return result;
 }
 
@@ -11,7 +11,7 @@ const selectAllPostsByAutorId = async (idAutor) => {
 }
 
 const selectPostById = async (idPost) => {
-    const [result] = await db.execute('SELECT * FROM posts WHERE id = ?', [idPost]);
+    const [result] = await db.execute('SELECT * FROM posts JOIN autores ON posts.autores_id = autores.id WHERE posts.id = ?', [idPost]);
     if(result.length === 0) {
         return null;
     }

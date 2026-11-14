@@ -31,7 +31,7 @@ Content-Type: application/json
 }
 
 ### DELETE AUTOR
-DELETE {{baseUrl}}/api/autores/2
+DELETE {{baseUrl}}/api/autores/11
 
 ################
 # API POSTS #
@@ -43,7 +43,7 @@ GET {{baseUrl}}/api/posts
 GET {{baseUrl}}/api/posts/1
 
 ### GET POSTS BY AUTOR ID
-GET {{baseUrl}}/api/posts/autor/1
+GET {{baseUrl}}/api/posts/autor/2
 
 ### POST POST
 POST {{baseUrl}}/api/posts
