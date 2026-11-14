@@ -33,13 +33,40 @@ Content-Type: application/json
 ### DELETE AUTOR
 DELETE {{baseUrl}}/api/autores/2
 
-### POST AUTOR
-POST {{baseUrl}}/api/autores
+################
+# API POSTS #
+################
+### GET POSTS
+GET {{baseUrl}}/api/posts
+
+### GET POST BY ID
+GET {{baseUrl}}/api/posts/1
+
+### GET POSTS BY AUTOR ID
+GET {{baseUrl}}/api/posts/autor/1
+
+### POST POST
+POST {{baseUrl}}/api/posts
 Content-Type: application/json
 
 {
-    "titulo": "Ejemplo",
-    "descripcion": "Descripción del ejemplo",
-    "categoria": "Categoría del ejemplo",
+    "titulo": "Nuevo Post",
+    "descripcion": "Descripción del nuevo post",
+    "categoria": "Categoría del nuevo post",
     "autores_id": 1
 }
+
+### PUT POST
+PUT {{baseUrl}}/api/posts/1
+Content-Type: application/json
+
+{
+    "titulo": "Post Actualizado",
+    "descripcion": "Descripción actualizada del post",
+    "categoria": "Categoría actualizada del post",
+    "autores_id": 1
+}
+
+### DELETE POST
+DELETE {{baseUrl}}/api/posts/3
+

@@ -26,7 +26,7 @@ const editAutor = async (req, res) => {
 
 const deleteAutor = async (req, res) => {
     const { idAutor } = req.params;
-    const result = await deleteAutorById(idAutor);
+    await deleteAutorById(idAutor);
     res.json(req.autor);
 }
 export {
