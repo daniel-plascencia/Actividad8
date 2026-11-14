@@ -16,7 +16,7 @@
     "init",
     "template"
   ],
-  "author": "Mario Girón Martín",
+  "author": "Daniel Plascencia",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
