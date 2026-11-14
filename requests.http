@@ -1,13 +1,45 @@
 // Requests to test the API from VS Code (REST Client extension)
 @baseUrl = http://localhost:3000
 
-### GET example
-GET {{baseUrl}}/api
+################
+# API AUTORES #
+################
+### GET AUTORES
+GET {{baseUrl}}/api/autores
 
-### POST example
-POST {{baseUrl}}/api
+### GET AUTOR BY ID
+GET {{baseUrl}}/api/autores/4
+
+### POST AUTOR
+POST {{baseUrl}}/api/autores
 Content-Type: application/json
 
 {
-    "name": "example"
+    "nombre": "Daniel Plascencia",
+    "email": "daniel.plascencia@example.com",
+    "imagen": "https://example.com/imagen.jpg"
+}
+
+### PUT AUTOR
+PUT {{baseUrl}}/api/autores/1
+Content-Type: application/json
+
+{
+    "nombre": "Daniel P. Gascon",
+    "email": "daniel.plascencia@example.com",
+    "imagen": "https://example.com/imagen.jpg"
+}
+
+### DELETE AUTOR
+DELETE {{baseUrl}}/api/autores/2
+
+### POST AUTOR
+POST {{baseUrl}}/api/autores
+Content-Type: application/json
+
+{
+    "titulo": "Ejemplo",
+    "descripcion": "Descripción del ejemplo",
+    "categoria": "Categoría del ejemplo",
+    "autores_id": 1
 }
